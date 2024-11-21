@@ -103,10 +103,7 @@
       }
     },
     mounted() {
-      // 默认显示总览模块
       this.currentModule = this.modules[0];
-      // 从服务器加载数据
-      this.loadContent();
       this.getStudentData();
     },
     methods: {
@@ -143,27 +140,6 @@
           alert('保存失败：' + error.message);
           console.error('保存失败：', error);
         }
-      },
-      async loadContent() {
-        /*try {
-          // 从服务器获取数据
-          const response = await fetch('/api/student/modules', {
-            method: 'GET',
-            headers: {
-              'Authorization': 'Bearer ' + localStorage.getItem('token')
-            }
-          });
-  
-          if (!response.ok) {
-            throw new Error('加载失败');
-          }
-  
-          const data = await response.json();
-          this.modules = data;
-        } catch (error) {
-          alert('加载失败：' + error.message);
-          console.error('加载失败：', error);
-        }*/
       },
       getStudentData() {
         console.log()

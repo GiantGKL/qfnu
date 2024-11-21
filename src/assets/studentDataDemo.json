@@ -1,0 +1,17 @@
+{
+    "type": "student",
+    "profile": {
+        "studentName": "张三",
+        "studentID": "2023123456"
+    },
+    "belongingGroup": [
+        1,
+        2,
+        4
+    ],
+    "task": [
+        12,
+        34,
+        56
+    ]
+}
