@@ -1,0 +1,17 @@
+{
+    "type": "teacher",
+    "teacherProfile": {
+        "teacherName": "教师姓名",
+        "techaerID": "教工号"
+    },
+    "ownedGruop": [
+        "1",
+        "2",
+        "3"
+    ],
+    "teacherTask": [
+        "4",
+        "5",
+        "6"
+    ]
+}

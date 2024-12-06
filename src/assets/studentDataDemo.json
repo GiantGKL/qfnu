@@ -1,17 +1,29 @@
 {
     "type": "student",
-    "profile": {
+    "studentProfile": {
         "studentName": "张三",
         "studentID": "2023123456"
     },
     "belongingGroup": [
-        1,
-        2,
-        4
+        "1",
+        "2",
+        "4"
     ],
-    "task": [
-        12,
-        34,
-        56
+    "studentTask": [
+        {
+            "12": {
+                "subTask": [
+                    {
+                        "1": {
+                            "subTaskTitle": "标题",
+                            "subMainText": "正文",
+                            "subTaskDeadline": "2024-09-01T00:00:00+08:00",
+                            "completionStatus": true
+                        }
+                    }
+                ],
+                "taskCompletionStatus": false
+            }
+        }
     ]
 }

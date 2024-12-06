@@ -47,7 +47,7 @@
           </div>
           <div v-else>
             <h2>{{ currentModule.name }}</h2>
-            <textarea v-model="currentModule.content" 
+            <textarea v-model="currentModule.content"
                       placeholder="请在这里输入内容..."></textarea>
             <button @click="saveContent">保存</button>
         </div>
@@ -55,7 +55,7 @@
     </div>
   </div>
 </template>
-  
+
 <script>
   import dayjs from 'dayjs';
   export default {
@@ -96,51 +96,12 @@
       };
     },
     computed: {
-      sortedHistory() {
-        return this.currentModule.history
-          ? [...this.currentModule.history].sort((a, b) => b.timestamp - a.timestamp)
-          : [];
-      }
     },
     mounted() {
       this.currentModule = this.modules[0];
       this.getStudentData();
     },
     methods: {
-      formatDate(timestamp) {
-        return new Date(timestamp).toLocaleString();
-      },
-      async saveContent() {
-        try {
-          if (!this.currentModule.history) {
-            this.currentModule.history = [];
-          }
-  
-          this.currentModule.history.push({
-            content: this.currentModule.content,
-            timestamp: Date.now()
-          });
-  
-          // 发送数据到服务器
-          const response = await fetch('/api/student/modules', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Bearer ' + localStorage.getItem('token')
-            },
-            body: JSON.stringify(this.modules)
-          });
-  
-          if (!response.ok) {
-            throw new Error('保存失败');
-          }
-  
-          alert('保存成功！');
-        } catch (error) {
-          alert('保存失败：' + error.message);
-          console.error('保存失败：', error);
-        }
-      },
       getStudentData() {
         console.log()
         this.studentName = '姓名'

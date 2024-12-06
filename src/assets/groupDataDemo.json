@@ -1,0 +1,16 @@
+{
+    "type":"group",
+    "groupAttribute":{
+        "groupName": "组名",
+        "groupID":"组id"
+    },
+    "owner": "教工号",
+    "admin": [
+        "123",
+        "456"
+    ],
+    "member": [
+        "111",
+        "222"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "type": "task",
+    "taskAttribute": {
+        "taskType": "类型",
+        "organizer": "123456",
+        "ifSubTask": true
+    },
+    "taskContent": {
+        "title": "标题",
+        "mainText": "正文",
+        "deadline": "截止时间"
+    }
+}
